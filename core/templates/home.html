@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    CÔNG TY TNHH PHÁT TRIỂN THƯƠNG MẠI VÀ HÓA CHẤT THĂNG LONG
+{% endblock %}
+
+{% block section %}
+    <section id="slider">
+        {% if item_list %}
+            <ul>
+                {% for item in item_list %}
+                    <li><a href="/core/{{ item.id }}">{{ item.title }}</a></li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No item are available.</p>
+        {% endif %}
+    </section>
+{% endblock %}
